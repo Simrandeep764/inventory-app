@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="col-xs-12">
+<mat-toolbar color="primary">INVENTORY</mat-toolbar>
+
+<mat-card>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+    <input matInput  
+    
+    placeholder="Enter the name of item 1" 
+    [(ngModel)]="price1"
+    name="price1"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</mat-form-field>
+</form>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+    <input matInput  
+    
+    placeholder="Enter the name of item 2" 
+    [(ngModel)]="price2"
+    name="price2"
+    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</mat-form-field>
+</form>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+    <input matInput  
+    
+    placeholder="Enter the price of item 1" 
+    [(ngModel)]="price3"
+    name="price3"
+    >
+
+</mat-form-field>
+</form>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+    <input matInput  
+    
+    placeholder="Enter the price of item 2" 
+    [(ngModel)]="price4"
+    name="price4"
+    >&nbsp;&nbsp;
+
+</mat-form-field>
+</form>
+</mat-card>
+<button  mat-raised-button
+color="accent" (click)="checkValid()">Click here</button>
+</div>
+<div *ngFor="let element of serverElements" class="row">
+    <div class="col-xs-12">
+    <div class="panel panel-default">
+        
+        <div class="panel-heading">Name of item 1 is {{ element.name }}</div>
+            <div class="panel-heading">Name of item 2 is {{ element.name1 }}</div>
+                 <div class="panel-body">
+                     <div class="panel-body"> <em >Price of item 1 is {{ element.pr1 }}</em></div>
+                        <div class="panel-body"> <em >Price of item 2 is {{ element.pr2 }}</em></div>
+                     <div class="panel-body">The total bill is {{element.total}} </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
